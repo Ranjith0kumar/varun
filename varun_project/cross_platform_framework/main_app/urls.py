@@ -16,7 +16,9 @@ router.register(r'deployment-configs', DeploymentConfigViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),
-    path('', views.index, name='index'),
+    path('mainpage/', views.index, name='index'),
+    
+    path("userpage/",user_view),
 ]
 
 # cross_platform/urls.py

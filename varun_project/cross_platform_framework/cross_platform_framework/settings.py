@@ -57,7 +57,7 @@ ROOT_URLCONF = 'cross_platform_framework.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR /'main_app/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

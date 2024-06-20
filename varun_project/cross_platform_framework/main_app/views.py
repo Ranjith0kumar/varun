@@ -2,6 +2,8 @@ from rest_framework import viewsets
 from .models import *
 from .serializers import *
 
+from .form import *
+
 from django.shortcuts import render
 
 def index(request):
@@ -10,6 +12,13 @@ def index(request):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    
+def user_view(request):
+    data=user_form()
+    
+    return render(request,"user.html",{"x" :data})
+        
+    
 
 class VersionControlViewSet(viewsets.ModelViewSet):
     queryset = VersionControl.objects.all()

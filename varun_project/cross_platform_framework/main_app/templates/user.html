@@ -1,0 +1,9 @@
+ {% block contend %}
+ <h2> user page </h2>
+<form action="" method="POST"> 
+   {% csrf_token%}
+    {{x.as_p}}
+
+    <button type="submit"> submit </button>
+</form>
+{% endblock  %}
